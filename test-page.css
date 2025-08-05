@@ -1,0 +1,423 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #6a5acd 0%, #00bfff 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* App Container */
+.app-container {
+    max-width: 430px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a5acd 0%, #00bfff 100%);
+    position: relative;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #6a5acd 0%, #00bfff 100%);
+    color: white;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    margin: 0 16px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.signal-icon, .wifi-icon, .battery-icon {
+    width: 18px;
+    height: 12px;
+    background: white;
+    border-radius: 2px;
+    opacity: 0.9;
+}
+
+.signal-icon {
+    background: linear-gradient(to top, white 0%, white 40%, transparent 40%);
+}
+
+.wifi-icon {
+    border-radius: 50% 50% 0 0;
+}
+
+.battery-icon {
+    border: 1px solid white;
+    background: transparent;
+    position: relative;
+}
+
+.battery-icon::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 3px;
+    width: 2px;
+    height: 6px;
+    background: white;
+    border-radius: 0 1px 1px 0;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Total Amount */
+.total-amount {
+    font-size: 32px;
+    font-weight: 300;
+    color: white;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+/* Section Styles */
+.credit-section,
+.insurance-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+/* Credit Details */
+.credit-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.detail-row.indent {
+    padding-left: 20px;
+}
+
+.detail-label {
+    color: #666;
+    font-size: 15px;
+}
+
+.detail-value {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Insurance Cards */
+.insurance-card {
+    background: rgba(245, 247, 250, 0.8);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.insurance-card.active {
+    border-color: #00bfff;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.insurance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.company-info {
+    flex: 1;
+}
+
+.company-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.tariffs-link {
+    color: #00bfff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tariffs-link:hover {
+    text-decoration: underline;
+}
+
+/* Radio Button */
+.radio-button {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.radio-button.selected {
+    border-color: #00bfff;
+    background: #00bfff;
+}
+
+.radio-button.selected::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Insurance Details */
+.insurance-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.insurance-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.insurance-label {
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.insurance-value {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Checkbox Row */
+.checkbox-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.checkbox-input:checked + .checkbox-custom {
+    background: #00bfff;
+    border-color: #00bfff;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.checkbox-label {
+    color: #666;
+    font-size: 14px;
+}
+
+.checkbox-value {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Insurance Total */
+.insurance-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    margin-top: 8px;
+}
+
+.total-label {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.total-value {
+    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Continue Button */
+.continue-btn {
+    background: linear-gradient(135deg, #8a2be2 0%, #00bfff 100%);
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(106, 90, 205, 0.3);
+    margin-top: 20px;
+}
+
+.continue-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(106, 90, 205, 0.4);
+}
+
+.continue-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .app-container {
+        max-width: 500px;
+    }
+    
+    .main-content {
+        padding: 30px 24px;
+    }
+    
+    .total-amount {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .app-container {
+        max-width: 600px;
+    }
+    
+    .main-content {
+        padding: 40px 32px;
+    }
+    
+    .total-amount {
+        font-size: 40px;
+    }
+    
+    .credit-section,
+    .insurance-section {
+        padding: 28px;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+a:focus {
+    outline: 2px solid #00bfff;
+    outline-offset: 2px;
+}
+
+/* Loading animation for buttons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.continue-btn:active {
+    animation: pulse 0.3s ease;
+}

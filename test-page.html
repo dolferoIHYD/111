@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-Площадка</title>
+    <link rel="stylesheet" href="test-page.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <button class="back-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="header-title">Онлайн-Площадка</h1>
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Total Amount -->
+            <div class="total-amount">
+                652 373 ₽
+            </div>
+
+            <!-- Credit Section -->
+            <section class="credit-section">
+                <h2 class="section-title">Кредит</h2>
+                <div class="credit-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Сумма кредита</span>
+                        <span class="detail-value">600 000 ₽</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Ставка</span>
+                        <span class="detail-value">20%</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Срок</span>
+                        <span class="detail-value">8 лет</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Ежемесячный платеж</span>
+                        <span class="detail-value">12 572 ₽</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Первоначальный взнос</span>
+                        <span class="detail-value"></span>
+                    </div>
+                    <div class="detail-row indent">
+                        <span class="detail-label">₽</span>
+                        <span class="detail-value">600 000 ₽</span>
+                    </div>
+                    <div class="detail-row indent">
+                        <span class="detail-label">%</span>
+                        <span class="detail-value">50%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Insurance Section -->
+            <section class="insurance-section">
+                <h2 class="section-title">Страхование</h2>
+                
+                <!-- Insurance Company 1 -->
+                <div class="insurance-card active">
+                    <div class="insurance-header">
+                        <div class="company-info">
+                            <h3 class="company-name">Страховая компания 1</h3>
+                            <a href="#" class="tariffs-link">Тарифы</a>
+                        </div>
+                        <div class="radio-button selected"></div>
+                    </div>
+                    
+                    <div class="insurance-details">
+                        <div class="insurance-row">
+                            <span class="insurance-label">КАСКО</span>
+                            <span class="insurance-value">52 373 ₽</span>
+                        </div>
+                        
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="checkbox-input">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-label">Добавить ОСАГО</span>
+                            </label>
+                            <span class="checkbox-value">+ 8 274 ₽</span>
+                        </div>
+                        
+                        <div class="insurance-total">
+                            <span class="total-label">Всего</span>
+                            <span class="total-value">52 373 ₽</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance Company 2 -->
+                <div class="insurance-card">
+                    <div class="insurance-header">
+                        <div class="company-info">
+                            <h3 class="company-name">Страховая компания 2</h3>
+                            <a href="#" class="tariffs-link">Тарифы</a>
+                        </div>
+                        <div class="radio-button"></div>
+                    </div>
+                    
+                    <div class="insurance-details">
+                        <div class="insurance-row">
+                            <span class="insurance-label">КАСКО</span>
+                            <span class="insurance-value">59 482 ₽</span>
+                        </div>
+                        
+                        <div class="checkbox-row">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="checkbox-input">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-label">Добавить ОСАГО</span>
+                            </label>
+                            <span class="checkbox-value">+ 7 967 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Continue Button -->
+            <button class="continue-btn">
+                Продолжить
+            </button>
+        </main>
+    </div>
+
+    <script src="test-page.js"></script>
+</body>
+</html>
